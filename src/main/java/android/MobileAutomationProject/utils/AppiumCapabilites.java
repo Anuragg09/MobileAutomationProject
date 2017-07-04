@@ -6,16 +6,19 @@ public class AppiumCapabilites extends JavaUtils
 {
 
 	public final String DEVICENAME = "deviceName";
-	public final String PLATFANAME  = "platformName";
+	public final String PLATFORMNAME  = "platformName";
+	public final String PLATFORMVERSION  = "platformVersion";
+	public final String APPPACKAGE  = "appPackage";
+	public final String APPACTIVITY  = "appActivity";
 	
 	public DesiredCapabilities desiredcapforPhoneCall()
 	{
 		DesiredCapabilities capabilites = new DesiredCapabilities();
 		capabilites.setCapability(DEVICENAME, readProperty("DEVICENAME"));
-		capabilites.setCapability(PLATFANAME, readProperty("PLATFARM"));
-		capabilites.setCapability("platformVersion",readProperty("PLATFARMVERSION"));
-		capabilites.setCapability("appPackage", readProperty("APPPACKAGE"));
-		capabilites.setCapability("appActivity", readProperty("APPACTIVITY"));
+		capabilites.setCapability(PLATFORMNAME, readProperty("PLATFARM"));
+		capabilites.setCapability(PLATFORMVERSION, readProperty("PLATFARMVERSION"));
+		capabilites.setCapability(APPPACKAGE, readProperty("APPPACKAGE"));
+		capabilites.setCapability(APPACTIVITY, readProperty("APPACTIVITY"));
 		return capabilites;
 	}
 	

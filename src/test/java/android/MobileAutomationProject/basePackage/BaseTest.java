@@ -11,18 +11,15 @@ public class BaseTest
 
 	
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void tearUp()
 	{
 		LaunchMobileApp launch = new LaunchMobileApp();
 	}
 	
-	
-	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearnDown(ITestResult result)
 	{
-		
 		TestResultUtils test = new TestResultUtils();
 		test.getFailureStatus(result);
 		MobilePage m = new MobilePage();

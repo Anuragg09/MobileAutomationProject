@@ -9,7 +9,7 @@ public class FirstTestCase extends BaseTest
 {
 
 	@Test
-	public void tes()
+	public void test()
 	{
 		HomeScreen home = new HomeScreen();
 		home.enterEmail();
