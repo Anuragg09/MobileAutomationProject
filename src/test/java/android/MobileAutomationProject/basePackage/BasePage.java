@@ -20,7 +20,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class BasePage
 {
 
-	public AppiumDriver driver;
+	public AppiumDriver<MobileElement> driver;
 	AppiumCapabilites app = new AppiumCapabilites();
 	JavaUtils ja = new JavaUtils();
 
@@ -30,7 +30,7 @@ public class BasePage
 		driver = DriverManger.getAppiumDriver();
 	}
 
-	public AppiumDriver<MobileElement> LaunchApp()
+	public AppiumDriver<MobileElement> LaunchApp() throws IOException
 	{
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL(ja.readProperty("AndroidURL")), app.desiredcapforPhoneCall());

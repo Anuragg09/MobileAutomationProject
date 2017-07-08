@@ -1,126 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
+    <line>
+      <![CDATA[Clicking on Skip Button]]>
+    </line>
+    <line>
+      <![CDATA[Closing App]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1181" started-at="2017-07-02T14:26:47Z" finished-at="2017-07-02T14:26:48Z">
+  <suite name="Default suite" duration-ms="70074" started-at="2017-07-08T13:40:20Z" finished-at="2017-07-08T13:41:31Z">
     <groups>
       <group name="Smoke">
-        <method signature="AddToBagTest.addToBagMethod()[pri:0, instance:testCases.AddToBagTest@2145b572]" name="addToBagMethod" class="testCases.AddToBagTest"/>
+        <method signature="AddToBagTest.addToBagMethod()[pri:0, instance:testCases.AddToBagTest@d8355a8]" name="addToBagMethod" class="testCases.AddToBagTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test name="Default test" duration-ms="1181" started-at="2017-07-02T14:26:47Z" finished-at="2017-07-02T14:26:48Z">
+    <test name="Default test" duration-ms="70074" started-at="2017-07-08T13:40:20Z" finished-at="2017-07-08T13:41:31Z">
       <class name="testCases.AddToBagTest">
-        <test-method status="FAIL" signature="tearUp()[pri:0, instance:testCases.AddToBagTest@2145b572]" name="tearUp" is-config="true" duration-ms="1118" started-at="2017-07-02T19:56:47Z" finished-at="2017-07-02T19:56:48Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement 'get driverData'? (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'Sandeep-Sandy', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: io.appium.java_client.android.AndroidDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement 'get driverData'? (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'Sandeep-Sandy', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: io.appium.java_client.android.AndroidDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:161)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:170)
-	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:82)
-	at android.MobileAutomationProject.basePackage.BasePage.LaunchApp(BasePage.java:35)
-	at android.MobileAutomationProject.basePackage.LaunchMobileApp.<init>(LaunchMobileApp.java:13)
-	at android.MobileAutomationProject.basePackage.BaseTest.tearUp(BaseTest.java:17)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:testCases.AddToBagTest@d8355a8]" name="tearUp" is-config="true" duration-ms="14555" started-at="2017-07-08T19:10:20Z" finished-at="2017-07-08T19:10:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="SKIP" signature="addToBagMethod()[pri:0, instance:testCases.AddToBagTest@2145b572]" name="addToBagMethod" duration-ms="0" started-at="2017-07-02T19:56:48Z" finished-at="2017-07-02T19:56:48Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
+        <test-method status="FAIL" signature="addToBagMethod()[pri:0, instance:testCases.AddToBagTest@d8355a8]" name="addToBagMethod" duration-ms="49866" started-at="2017-07-08T19:10:35Z" finished-at="2017-07-08T19:11:25Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement 'get driverData'? (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301 milliseconds
+              <![CDATA[Can't locate an element by this strategy: Locator map: 
+- native content: "By.id: //android.widget.TextView[@index='Filter' and @index='1']" 
+- html content: "by id or name "filterButton""
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'Sandeep-Sandy', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: io.appium.java_client.android.AndroidDriver]]>
+System info: host: 'Sandeep-Sandy', ip: '192.168.0.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement 'get driverData'? (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301 milliseconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
+- native content: "By.id: //android.widget.TextView[@index='Filter' and @index='1']" 
+- html content: "by id or name "filterButton""
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'Sandeep-Sandy', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: io.appium.java_client.android.AndroidDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:161)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:170)
-	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:82)
-	at android.MobileAutomationProject.basePackage.BasePage.LaunchApp(BasePage.java:35)
-	at android.MobileAutomationProject.basePackage.LaunchMobileApp.<init>(LaunchMobileApp.java:13)
-	at android.MobileAutomationProject.basePackage.BaseTest.tearUp(BaseTest.java:17)
+System info: host: 'Sandeep-Sandy', ip: '192.168.0.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:152)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:51)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$317eb47a.toString(<generated>)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:701)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at android.MobileAutomationProject.basePackage.BasePage.waitUntilElementClickable(BasePage.java:53)
+	at mobileScreens.AddToBagPage.clickListFirstElement(AddToBagPage.java:148)
+	at testCases.AddToBagTest.addToBagMethod(AddToBagTest.java:15)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
@@ -142,10 +76,27 @@ Driver info: io.appium.java_client.android.AndroidDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
+            <line>
+              <![CDATA[Clicking on Skip Button]]>
+            </line>
           </reporter-output>
         </test-method> <!-- addToBagMethod -->
+        <test-method status="PASS" signature="tearnDown(org.testng.ITestResult)[pri:0, instance:testCases.AddToBagTest@d8355a8]" name="tearnDown" is-config="true" duration-ms="5614" started-at="2017-07-08T19:11:25Z" finished-at="2017-07-08T19:11:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addToBagMethod status=FAILURE method=AddToBagTest.addToBagMethod()[pri:0, instance:testCases.AddToBagTest@d8355a8] output=Clicking on Skip Button]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Closing App]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearnDown -->
       </class> <!-- testCases.AddToBagTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

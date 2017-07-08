@@ -84,13 +84,12 @@ public class JavaUtils
 		}
 	}
 
-	public void ExcelLibrary() throws EncryptedDocumentException, InvalidFormatException, IOException 
+	public String ExcelLibrary() throws EncryptedDocumentException, InvalidFormatException, IOException 
 	{
-
+		String value ="";
 		FileInputStream fis = new FileInputStream("");
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sheet = wb.getSheet("Data");
-		Row row = sheet.getRow(3);
 		int rowcount = sheet.getLastRowNum();
 		int columncount = sheet.getRow(0).getLastCellNum();
 		for(int i = 0;i<rowcount;i++)
@@ -103,11 +102,12 @@ public class JavaUtils
 				Cell columnvalue = sheet.getRow(0).getCell(i);
 				if(columnvalue.equals("Name"))
 				{
-					sheet.getRow(i).getCell(j);
+				 value = sheet.getRow(i).getCell(j).toString();
 				}
 			}
 		}
 		}
+		return value;
 	}
 	
 	/*public void ExcelLibrary() throws EncryptedDocumentException, InvalidFormatException, IOException 

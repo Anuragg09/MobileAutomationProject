@@ -10,9 +10,14 @@ public class LaunchMobileApp extends BasePage
 	public LaunchMobileApp()
 	{
 		super();
-		super.LaunchApp();
+		try {
+			super.LaunchApp();
+		} catch (Exception e) {
+	
+		}
+	
 		DriverManger.tl.set(super.driver);
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this);	
+		PageFactory.initElements(driver, this);	
 	}
 
 }

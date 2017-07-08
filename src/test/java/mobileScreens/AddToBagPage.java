@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
@@ -74,18 +75,18 @@ public class AddToBagPage extends BasePage{
 	@AndroidFindBy(id = "incorrect_login_text")
 	private MobileElement listFirstText;
 	
-	@AndroidFindBy(id = "//android.view.View[@index='2']/android.widget.TextView[@text='Filter' and @index='1']")
+	@AndroidFindBy(id = "//android.widget.TextView[@index='Filter' and @index='1']")
 	private MobileElement filterButton;
 	
 	@AndroidFindBy(id = "//android.widget.TextView[@text='APPLY' and @index='0']")
 	private MobileElement applyButton;
 	
-	@AndroidFindBy(id = "")
+	@AndroidFindBy(id = "jhg")
 	private MobileElement clickProduct;
 	
 	public void findSkipMethod()
 	{
-		waitUntilElementVisible(findSkip);
+		waitUntilElementClickable(findSkip);
 		findSkip.click();
 	}
 	
@@ -144,7 +145,7 @@ public class AddToBagPage extends BasePage{
 	//Click first item from List
 	WebElement element = driver.findElement(By.id("auto_suggest_list_view"));
 	element.findElement(By.id("incorrect_login_text")).click();
-	waitUntilElementVisible(filterButton);
+	waitUntilElementClickable(filterButton);
 	//Click on Filter Button
 	clickOnElement(filterButton);
 	//Set the Price

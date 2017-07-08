@@ -1,18 +1,73 @@
 package android.MobileAutomationProject.utils;
 
+import java.awt.List;
 import java.io.IOException;
+import java.util.ArrayList;
+
 
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecuteResultHandler;
 import org.apache.commons.exec.DefaultExecutor;
+import org.apache.log4j.Logger;
 import org.testng.Reporter;
 
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
+import mainUtils.LoggerUtils;
 
 public class AppiumUtils extends JavaUtils {
 	
+	public ArrayList<String> devicelist = new ArrayList<String>();
+	CommandExecution cmd = new CommandExecution();
+	public Logger logger;
+	public AppiumUtils()
+	{
+		logger = Logger.getLogger(this.getClass());
+	}
+	
 	public void startAppiumServer() throws IOException, InterruptedException {
+		DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();  
+		DefaultExecutor executor = new DefaultExecutor(); 
+		executor.execute(getcommandCapabilites(), resultHandler);
+		Reporter.log("Startig the Appium Server", true);
+		Thread.sleep(50000);
+	}
+
+	public ArrayList<String> getDeviceID() throws IOException
+	{
+	
+		String device = cmd.runcommnad("adb devices");
+		
+		logger.info("Straertr");
+	
+		logger.info(device.toString());
+		String lines[] = device.split("\n");
+		if (lines.length<=0)
+		{
+			System.out.println("No Device Found");
+		}
+		else 
+		{
+		for (int i = 1; i <lines.length; i++) 
+		{
+			lines[i]= lines[i].replaceAll("\\s+", "");
+			if (lines[i].contains("device"))
+			{
+				lines[i] = lines[i].replaceAll("device", "");
+				String DeveID = lines[i];
+				
+				
+				devicelist.add(DeveID);
+				System.out.println(devicelist);
+			}
+		}	
+		}
+		System.out.println(device);
+		return devicelist;
+	}
+	
+	public CommandLine getcommandCapabilites()
+	{
 		CommandLine command = new CommandLine("cmd");
 		command.addArgument(readProperty("DIRECTORY"));  
 		command.addArgument(readProperty("NODEPATH"));  
@@ -21,14 +76,9 @@ public class AppiumUtils extends JavaUtils {
 		command.addArgument(readProperty("APPIUMSERVERADDRESS"));  
 		command.addArgument(readProperty("APPIUMSERVERPORTTEXT"));  
 		command.addArgument(readProperty("APPIUMSERVERPORTNUMBER"));  
-		command.addArgument(readProperty("NORESET"));	    
-		DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();  
-		DefaultExecutor executor = new DefaultExecutor(); 
-		executor.execute(command, resultHandler);
-		Reporter.log("Startig the Appium Server", true);
-		Thread.sleep(50000);
+		command.addArgument(readProperty("NORESET"));	
+		return command;
 	}
-
 	public void generateLogsInConsole() {
 		Reporter.log("Generating the logs in Console", true);
 		AppiumServiceBuilder asb = new AppiumServiceBuilder();

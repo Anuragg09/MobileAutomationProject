@@ -9,6 +9,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 
@@ -16,10 +17,17 @@ import android.MobileAutomationProject.utils.JavaUtils;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.StartsActivity;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class MobilePage extends BasePage
 {
 	JavaUtils ja = new JavaUtils();
+	
+	public MobilePage()
+	{
+		super();
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	}
 	
 	TouchAction touch = new TouchAction(driver);
 	
